@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_18_085614) do
+ActiveRecord::Schema.define(version: 2019_10_18_105234) do
 
   create_table "poker_votings", force: :cascade do |t|
     t.integer "voters"
-    t.integer "votes_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["votes_id"], name: "index_poker_votings_on_votes_id"
   end
 
   create_table "votes", force: :cascade do |t|
     t.integer "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "poker_voting_id"
+    t.index ["poker_voting_id"], name: "index_votes_on_poker_voting_id"
   end
 
 end

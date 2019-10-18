@@ -1,3 +1,3 @@
 class Vote < ApplicationRecord
-    has_one :poker_voting
+    belongs_to :poker_voting
 end

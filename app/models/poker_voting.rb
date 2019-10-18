@@ -1,3 +1,3 @@
 class PokerVoting < ApplicationRecord
-  belongs_to :votes
+ has_many :votes, optional: true
 end
