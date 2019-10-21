@@ -12,10 +12,8 @@ module Api
             private
       
             def vote_params
-              params.permit(:value, :poker_voting_id)
-            end
-
-            
+              params.permit(:username, :value, :poker_voting_id)
+            end    
       
           end
         end

@@ -7,19 +7,20 @@ module Api
       
              # GET /index
               def index
+
                 @poker_votings = PokerVoting.all
                 render json: @poker_votings
               end
+              
 
-    
-            
              def create
               @poker_voting = PokerVoting.create!(poker_voting_params)
               render json: @poker_voting, status: :created
             end
 
             def show
-              render json: @poker_voting, average: @poker_votings.
+              results = @poker_voting.votes.map {|vote| { username: vote.username, value: vote.value }}
+              render json: @poker_voting.attributes.merge({ results: results })
             end
 
 
