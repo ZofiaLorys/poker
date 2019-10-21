@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_18_105234) do
+ActiveRecord::Schema.define(version: 2019_10_21_190838) do
 
   create_table "poker_votings", force: :cascade do |t|
     t.integer "voters"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_10_18_105234) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "poker_voting_id"
+    t.string "username"
     t.index ["poker_voting_id"], name: "index_votes_on_poker_voting_id"
   end
 
