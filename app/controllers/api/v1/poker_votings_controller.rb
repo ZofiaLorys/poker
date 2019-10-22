@@ -7,7 +7,6 @@ module Api
       
              # GET /index
               def index
-
                 @poker_votings = PokerVoting.all
                 render json: @poker_votings
               end
@@ -24,18 +23,16 @@ module Api
             end
 
 
-    
-      
             private
       
             def poker_voting_params
-              params.permit(:voters)
+              params.permit(:amount_of_votes)
             end
 
             def set_poker_voting
               @poker_voting = PokerVoting.find(params[:id])
             end
-      
+
       
           end
         end
