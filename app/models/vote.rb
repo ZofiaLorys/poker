@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Vote < ApplicationRecord
-    belongs_to :poker_voting
+  belongs_to :poker_voting
 end
