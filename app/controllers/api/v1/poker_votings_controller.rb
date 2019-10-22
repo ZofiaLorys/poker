@@ -4,13 +4,7 @@ module Api
   module V1
     class PokerVotingsController < ApplicationController
       skip_before_action :verify_authenticity_token
-      before_action :set_poker_voting, only: %i[show update destroy]
-
-      # GET /index
-      def index
-        @poker_votings = PokerVoting.all
-        render json: @poker_votings
-      end
+      before_action :set_poker_voting, only: [:show]
 
       def create
         @poker_voting = PokerVoting.create!(poker_voting_params)
