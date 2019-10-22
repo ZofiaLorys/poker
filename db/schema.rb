@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_21_190838) do
+ActiveRecord::Schema.define(version: 2019_10_22_083229) do
 
   create_table "poker_votings", force: :cascade do |t|
-    t.integer "voters"
+    t.integer "amount_of_votes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
